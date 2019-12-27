@@ -1,0 +1,70 @@
+[
+  {
+    "row": "A",
+    "type": 1,
+    "columns": [
+      {
+        "idx": 1,
+        "status": 0
+      },
+      {
+        "idx": 2,
+        "status": 0
+      },
+      {
+        "idx": 3,
+        "status": 1
+      },
+      {
+        "idx": 4,
+        "status": 0
+      },
+      {
+        "idx": 5,
+        "status": 0
+      },
+      {
+        "idx": 6,
+        "status": 1
+      },
+      {
+        "idx": 7,
+        "status": 1
+      }
+    ]
+  },
+  {
+    "row": "B",
+    "type": 1,
+    "columns": [
+      {
+        "idx": 1,
+        "status": 0
+      },
+      {
+        "idx": 2,
+        "status": 0
+      },
+      {
+        "idx": 3,
+        "status": 1
+      },
+      {
+        "idx": 4,
+        "status": 0
+      },
+      {
+        "idx": 5,
+        "status": 0
+      },
+      {
+        "idx": 6,
+        "status": 1
+      },
+      {
+        "idx": 7,
+        "status": 1
+      }
+    ]
+  }
+]

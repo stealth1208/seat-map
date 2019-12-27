@@ -1,60 +1,29 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
-import { Notes } from '@Pages';
 import React from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import './styles/_layout.scss';
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      // 'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-  },
-});
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { GlobalStyle } from '@Styles/globalStyles';
+import { Seats } from '@Pages';
+import { SeatBookingContext } from '@Contexts';
+import data from './contexts/data.json';
+import { Data } from '@Contexts/SeatBookingContext';
 
 function Index() {
-  return <h2>Home</h2>;
+  return <Seats />;
 }
 
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
+const AppData = [...data];
 
 function AppRouter() {
+  console.log('App data', AppData);
   return (
     <Router>
-      <ThemeProvider theme={theme}>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/notes/">Notes</Link>
-              </li>
-            </ul>
-          </nav>
-
-          <Route path="/" exact={true} component={Index} />
-          <Route path="/notes/" component={Notes} />
-          <Route path="/users/" component={Users} />
-        </div>
-      </ThemeProvider>
+      <SeatBookingContext.Provider
+        value={{
+          data: AppData,
+        }}
+      >
+        <GlobalStyle />
+        <Route path="/" exact={true} component={Index} />
+      </SeatBookingContext.Provider>
     </Router>
   );
 }

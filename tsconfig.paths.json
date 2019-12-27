@@ -3,12 +3,11 @@
     "baseUrl": "src",
     "paths": {
       "@Components": ["components"],
+      "@Components/*": ["components/*"],
       "@Pages": ["pages"],
       "@Contexts": ["contexts"],
-      "@Hooks": ["hooks"],
-      "@Interfaces": ["interfaces/interfaces"],
-      "@Tools": ["helpers/tools"],
-      "@Constants": ["helpers/constants"]
+      "@Contexts/*": ["contexts/*"],
+      "@Styles/*": ["styles/*"]
     }
   }
 }

@@ -1,1 +1,2 @@
-export { default as NotesContext } from './notesContext';
+export { default as SeatBookingContext } from './SeatBookingContext';
+export { default as AppData } from './data.json';
