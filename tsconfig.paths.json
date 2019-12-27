@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@Components": ["components"],
+      "@Pages": ["pages"],
+      "@Contexts": ["contexts"],
+      "@Hooks": ["hooks"],
+      "@Interfaces": ["interfaces/interfaces"],
+      "@Tools": ["helpers/tools"],
+      "@Constants": ["helpers/constants"]
+    }
+  }
+}
