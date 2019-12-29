@@ -12,6 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: ${FONT_FAMILY.ARIAL};
-    background-color: ${COLORS.GREY}
+    background-color: ${COLORS.BLACK}
   }
 `;

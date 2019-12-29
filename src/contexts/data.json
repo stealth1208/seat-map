@@ -1,70 +1,62 @@
-[
-  {
-    "row": "A",
-    "type": 1,
-    "columns": [
-      {
-        "idx": 1,
-        "status": 0
-      },
-      {
-        "idx": 2,
-        "status": 0
-      },
-      {
-        "idx": 3,
-        "status": 1
-      },
-      {
-        "idx": 4,
-        "status": 0
-      },
-      {
-        "idx": 5,
-        "status": 0
-      },
-      {
-        "idx": 6,
-        "status": 1
-      },
-      {
-        "idx": 7,
-        "status": 1
-      }
-    ]
-  },
-  {
-    "row": "B",
-    "type": 1,
-    "columns": [
-      {
-        "idx": 1,
-        "status": 0
-      },
-      {
-        "idx": 2,
-        "status": 0
-      },
-      {
-        "idx": 3,
-        "status": 1
-      },
-      {
-        "idx": 4,
-        "status": 0
-      },
-      {
-        "idx": 5,
-        "status": 0
-      },
-      {
-        "idx": 6,
-        "status": 1
-      },
-      {
-        "idx": 7,
-        "status": 1
-      }
-    ]
-  }
-]
+{
+  "A": [
+    {
+      "number": 1,
+      "type": 1,
+      "status": 1,
+      "selected": false
+    },
+    {
+      "number": 2,
+      "type": 1,
+      "status": 1,
+      "selected": false
+    },
+    {
+      "number": 3,
+      "type": 0,
+      "status": 1,
+      "selected": false
+    }
+  ],
+  "B": [
+    {
+      "number": 1,
+      "type": 2,
+      "status": 1,
+      "selected": false
+    },
+    {
+      "number": 2,
+      "type": 2,
+      "status": 0,
+      "selected": false
+    },
+    {
+      "number": 3,
+      "type": 2,
+      "status": 0,
+      "selected": false
+    }
+  ],
+  "C": [
+    {
+      "number": 1,
+      "type": 3,
+      "status": 0,
+      "selected": false
+    },
+    {
+      "number": 2,
+      "type": 3,
+      "status": 1,
+      "selected": false
+    },
+    {
+      "number": 3,
+      "type": 3,
+      "status": 1,
+      "selected": false
+    }
+  ]
+}
