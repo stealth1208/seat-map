@@ -3,60 +3,378 @@
     {
       "number": 1,
       "type": 1,
-      "status": 1,
-      "selected": false
+      "status": 1
     },
     {
       "number": 2,
       "type": 1,
-      "status": 1,
-      "selected": false
+      "status": 1
     },
     {
       "number": 3,
-      "type": 0,
-      "status": 1,
-      "selected": false
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 1,
+      "status": 1
     }
   ],
   "B": [
     {
       "number": 1,
-      "type": 2,
-      "status": 1,
-      "selected": false
+      "type": 1,
+      "status": 1
     },
     {
       "number": 2,
-      "type": 2,
-      "status": 0,
-      "selected": false
+      "type": 1,
+      "status": 0
     },
     {
       "number": 3,
-      "type": 2,
-      "status": 0,
-      "selected": false
+      "type": 1,
+      "status": 0
+    },
+    {
+      "number": 4,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 1,
+      "status": 1
     }
   ],
   "C": [
     {
       "number": 1,
+      "type": 1,
+      "status": 0
+    },
+    {
+      "number": 2,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 3,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 1,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 1,
+      "status": 1
+    }
+  ],
+  "D": [
+    {
+      "number": 1,
+      "type": 2,
+      "status": 0
+    },
+    {
+      "number": 2,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 3,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 2,
+      "status": 1
+    }
+  ],
+  "E": [
+    {
+      "number": 1,
+      "type": 2,
+      "status": 0
+    },
+    {
+      "number": 2,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 3,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 2,
+      "status": 1
+    }
+  ],
+  "F": [
+    {
+      "number": 1,
+      "type": 2,
+      "status": 0
+    },
+    {
+      "number": 2,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 3,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 2,
+      "status": 1
+    }
+  ],
+  "G": [
+    {
+      "number": 1,
+      "type": 2,
+      "status": 0
+    },
+    {
+      "number": 2,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 3,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 2,
+      "status": 1
+    }
+  ],
+  "H": [
+    {
+      "number": 1,
+      "type": 2,
+      "status": 0
+    },
+    {
+      "number": 2,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 3,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 2,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 2,
+      "status": 1
+    }
+  ],
+  "I": [
+    {
+      "number": 1,
       "type": 3,
-      "status": 0,
-      "selected": false
+      "status": 0
     },
     {
       "number": 2,
       "type": 3,
-      "status": 1,
-      "selected": false
+      "status": 1
     },
     {
       "number": 3,
       "type": 3,
-      "status": 1,
-      "selected": false
+      "status": 1
+    },
+    {
+      "number": 4,
+      "type": 3,
+      "status": 1
+    },
+    {
+      "number": 5,
+      "type": 3,
+      "status": 1
+    },
+    {
+      "number": 6,
+      "type": 3,
+      "status": 1
+    },
+    {
+      "number": 7,
+      "type": 3,
+      "status": 1
+    },
+    {
+      "number": 8,
+      "type": 3,
+      "status": 1
     }
   ]
 }

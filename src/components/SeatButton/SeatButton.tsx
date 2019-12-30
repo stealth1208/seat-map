@@ -16,6 +16,12 @@ type Seat = {
   status: number;
 };
 
+const BookingPrices = {
+  [SeatType.STANDARD]: 60000,
+  [SeatType.VIP]: 80000,
+  [SeatType.DELUXE]: 110000,
+};
+
 const SeatButton: React.FunctionComponent<Props> = ({ type, status, row, column }) => {
   const [data, setData] = useAppContext();
   const onSelectSeat = useCallback(() => {
@@ -29,6 +35,9 @@ const SeatButton: React.FunctionComponent<Props> = ({ type, status, row, column 
         number: column,
         status: status === SeatStatus.AVAILABLE ? SeatStatus.SELECTING : SeatStatus.AVAILABLE,
       },
+      price: SeatStatus.AVAILABLE
+        ? BookingPrices[type as SeatType]
+        : -BookingPrices[type as SeatType],
     });
   }, [column, row, status]);
 

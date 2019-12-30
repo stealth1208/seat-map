@@ -39,7 +39,7 @@ type NextData = {
 
 export const AppContextProvider = (props: any) => {
   const { children } = props;
-  const [data, setData] = useState({ ...AppData });
+  const [data, setData] = useState({ ...AppData, lastItem: {} });
   return (
     <SeatBookingContext.Provider value={{ data, setData }}>{children}</SeatBookingContext.Provider>
   );
@@ -53,13 +53,14 @@ export const useAppContext = () => {
   const setContext = useCallback(
     (nextData: NextData) => {
       updateDataFromContext((prev: DataType) => {
+        let newItem = {};
         const temp = prev[nextData.row].map((item: SeatInfo, index: number) => {
           if (nextData.seatInfo.number - 1 === index) {
-            item = {
+            newItem = {
               ...item,
               ...nextData.seatInfo,
             };
-            return item;
+            return newItem;
           }
           return item;
         });
@@ -67,6 +68,7 @@ export const useAppContext = () => {
         return {
           ...prev,
           [nextData.row]: temp,
+          lastItem: newItem,
         };
       });
     },

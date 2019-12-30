@@ -13,21 +13,22 @@ type SeatInfo = {
 
 const Seats: React.FunctionComponent<ISeatsProps> = props => {
   const [data] = useAppContext();
-
+  console.log('data', data);
   return (
     <Wrapper>
       {Object.keys(data).map((key: string, index: number) => (
         <Rows key={index}>
           <RowNames>{key}</RowNames>
-          {data[key].map(({ number, type, status }: SeatInfo, idx: number) => (
-            <SeatButton
-              key={`${number}_${idx}`}
-              type={type}
-              status={status}
-              row={key}
-              column={number}
-            />
-          ))}
+          {Array.isArray(data[key]) &&
+            data[key].map(({ number, type, status }: SeatInfo, idx: number) => (
+              <SeatButton
+                key={`${number}_${idx}`}
+                type={type}
+                status={status}
+                row={key}
+                column={number}
+              />
+            ))}
         </Rows>
       ))}
 
