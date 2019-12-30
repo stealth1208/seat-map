@@ -8,13 +8,8 @@ interface Props {
   column: number;
   type: number;
   status: number;
+  isDisabled?: boolean;
 }
-
-type Seat = {
-  number: number;
-  type: number;
-  status: number;
-};
 
 const BookingPrices = {
   [SeatType.STANDARD]: 60000,
@@ -22,28 +17,34 @@ const BookingPrices = {
   [SeatType.DELUXE]: 110000,
 };
 
-const SeatButton: React.FunctionComponent<Props> = ({ type, status, row, column }) => {
-  const [data, setData] = useAppContext();
+const SeatButton: React.FunctionComponent<Props> = ({ type, status, row, column, isDisabled }) => {
+  const [, setData] = useAppContext();
+
   const onSelectSeat = useCallback(() => {
     if (status === SeatStatus.BOOKED) {
       return;
     }
 
+    if (status === SeatStatus.AVAILABLE && isDisabled) {
+      return;
+    }
+
+    const price = BookingPrices[type as SeatType];
     setData({
       row,
       seatInfo: {
         number: column,
         status: status === SeatStatus.AVAILABLE ? SeatStatus.SELECTING : SeatStatus.AVAILABLE,
       },
-      price: SeatStatus.AVAILABLE
-        ? BookingPrices[type as SeatType]
-        : -BookingPrices[type as SeatType],
+      price: status === SeatStatus.SELECTING ? -price : price,
+      count: status === SeatStatus.SELECTING ? -1 : 1,
     });
-  }, [column, row, status]);
+  }, [column, row, status, setData, type, isDisabled]);
 
   return (
     <Wrapper type={type} status={status} onClick={onSelectSeat}>
       {row}
+      {column}
     </Wrapper>
   );
 };

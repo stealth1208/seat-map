@@ -8,7 +8,22 @@ export type SeatInfo = {
 };
 
 type DataType = {
-  [key: string]: SeatInfo[];
+  seatInfo: {
+    [key: string]: SeatInfo[];
+  };
+  prices: number;
+  count: number;
+};
+
+type NextData = {
+  row: string;
+  seatInfo: {
+    number: number;
+    type: number;
+    status: number;
+  };
+  price: number;
+  count: number;
 };
 
 export enum SeatStatus {
@@ -23,29 +38,26 @@ export enum SeatType {
   DELUXE = 3,
 }
 
-type AppProps = {
+type AppContext = {
   data: DataType;
   setData: React.Dispatch<React.SetStateAction<DataType>>;
 };
 
-type NextData = {
-  row: string;
-  seatInfo: {
-    number: number;
-    type: number;
-    status: number;
-  };
-};
+const SeatBookingContext = React.createContext<any>({});
 
 export const AppContextProvider = (props: any) => {
   const { children } = props;
-  const [data, setData] = useState({ ...AppData, lastItem: {} });
+  const [data, setData] = useState({
+    seatInfo: {
+      ...AppData,
+    },
+    prices: 0,
+    count: 0,
+  });
   return (
     <SeatBookingContext.Provider value={{ data, setData }}>{children}</SeatBookingContext.Provider>
   );
 };
-
-const SeatBookingContext = React.createContext<any>({});
 
 export const useAppContext = () => {
   const { setData: updateDataFromContext, data: context } = useContext(SeatBookingContext);
@@ -53,27 +65,29 @@ export const useAppContext = () => {
   const setContext = useCallback(
     (nextData: NextData) => {
       updateDataFromContext((prev: DataType) => {
-        let newItem = {};
-        const temp = prev[nextData.row].map((item: SeatInfo, index: number) => {
+        const newArray = prev.seatInfo[nextData.row].map((item: SeatInfo, index: number) => {
           if (nextData.seatInfo.number - 1 === index) {
-            newItem = {
+            return {
               ...item,
               ...nextData.seatInfo,
             };
-            return newItem;
           }
           return item;
         });
 
         return {
           ...prev,
-          [nextData.row]: temp,
-          lastItem: newItem,
+          seatInfo: {
+            ...prev.seatInfo,
+            [nextData.row]: newArray,
+          },
+          prices: prev.prices + nextData.price,
+          count: prev.count + nextData.count,
         };
       });
     },
     [updateDataFromContext],
   );
 
-  return [context, setContext, updateDataFromContext];
+  return [context, setContext];
 };
