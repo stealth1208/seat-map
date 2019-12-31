@@ -2,22 +2,25 @@ import styled from 'styled-components';
 import { COLORS } from '@Styles/variables';
 import { SeatStatus, SeatType } from '@Contexts/SeatBookingContext';
 
-const SeatStatusBgColors = {
+export const SeatStatusBgColors = {
   [SeatStatus.BOOKED]: COLORS.GREY,
   [SeatStatus.AVAILABLE]: 'transparent',
   [SeatStatus.SELECTING]: COLORS.WHITE,
+  [SeatStatus.UNDEFINED]: 'transparent',
 };
 
-const SeatStatusBorderColors = {
+export const SeatTypeBorderColors = {
   [SeatType.STANDARD]: COLORS.WHITE,
   [SeatType.VIP]: COLORS.GREEN,
   [SeatType.DELUXE]: COLORS.BLUE,
+  [SeatType.UNDEFINED]: COLORS.WHITE,
 };
 
-const ButtonColors = {
+export const ButtonColors = {
   [SeatStatus.BOOKED]: COLORS.WHITE,
   [SeatStatus.AVAILABLE]: COLORS.WHITE,
   [SeatStatus.SELECTING]: COLORS.BLACK,
+  [SeatStatus.UNDEFINED]: COLORS.WHITE,
 };
 
 export const Wrapper = styled.div<{
@@ -27,7 +30,7 @@ export const Wrapper = styled.div<{
   width: 35px;
   height: 30px;
   border-radius: 40%;
-  border-color: ${({ type = SeatType.STANDARD }) => SeatStatusBorderColors[type]};
+  border-color: ${({ type = SeatType.STANDARD }) => SeatTypeBorderColors[type]};
   border-width: 1px;
   border-style: solid;
   font-size: 1.2rem;

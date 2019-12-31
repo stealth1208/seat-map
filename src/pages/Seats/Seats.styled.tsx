@@ -3,7 +3,7 @@ import { COLORS } from '@Styles/variables';
 
 export const Wrapper = styled.div`
   display: flex;
-  padding: 8rem 0;
+  padding: 8rem 0 0;
   flex-direction: column;
   justify-content: center;
   align-content: center;

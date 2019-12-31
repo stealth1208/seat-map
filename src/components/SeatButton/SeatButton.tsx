@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
-import { Wrapper } from './SeatButton.styled';
 import { useAppContext } from '@Contexts';
 import { SeatType, SeatStatus } from '@Contexts/SeatBookingContext';
+import { Wrapper } from './SeatButton.styled';
 
 interface Props {
   row: string;
@@ -15,6 +15,7 @@ const BookingPrices = {
   [SeatType.STANDARD]: 60000,
   [SeatType.VIP]: 80000,
   [SeatType.DELUXE]: 110000,
+  [SeatType.UNDEFINED]: 0,
 };
 
 const SeatButton: React.FunctionComponent<Props> = ({ type, status, row, column, isDisabled }) => {
@@ -39,7 +40,7 @@ const SeatButton: React.FunctionComponent<Props> = ({ type, status, row, column,
       price: status === SeatStatus.SELECTING ? -price : price,
       count: status === SeatStatus.SELECTING ? -1 : 1,
     });
-  }, [column, row, status, setData, type, isDisabled]);
+  }, [status, isDisabled, type, setData, row, column]);
 
   return (
     <Wrapper type={type} status={status} onClick={onSelectSeat}>

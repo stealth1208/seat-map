@@ -1,12 +1,12 @@
 import React from 'react';
-import { SeatButton, Prices } from '@Components';
+import { SeatButton, Prices, Annotate } from '@Components';
 import { useAppContext } from '@Contexts';
-import { Wrapper, RowNames, Rows } from './Seats.styled';
 import { SeatInfo } from '@Contexts/SeatBookingContext';
+import { Wrapper, RowNames, Rows } from './Seats.styled';
 
 interface ISeatsProps {}
 
-const Seats: React.FunctionComponent<ISeatsProps> = props => {
+const Seats: React.FunctionComponent<ISeatsProps> = (props) => {
   const [{ seatInfo, count }] = useAppContext();
 
   return (
@@ -26,7 +26,7 @@ const Seats: React.FunctionComponent<ISeatsProps> = props => {
           ))}
         </Rows>
       ))}
-
+      <Annotate />
       <Prices />
     </Wrapper>
   );

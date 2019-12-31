@@ -13,7 +13,7 @@ function AppRouter() {
     <Router>
       <AppContextProvider>
         <GlobalStyle />
-        <Route path="/" exact={true} component={Index} />
+        <Route path="/" exact component={Index} />
       </AppContextProvider>
     </Router>
   );

@@ -30,12 +30,14 @@ export enum SeatStatus {
   BOOKED = 0,
   AVAILABLE = 1,
   SELECTING = 2,
+  UNDEFINED = -1,
 }
 
 export enum SeatType {
   STANDARD = 1,
   VIP = 2,
   DELUXE = 3,
+  UNDEFINED = -1,
 }
 
 type AppContext = {

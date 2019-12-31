@@ -1,6 +1,8 @@
 import React from 'react';
 import { useAppContext } from '@Contexts';
-import { Wrapper, Label, Total, TotalWrapper, CinemaInfo } from './Prices.styled';
+import {
+  Wrapper, Label, Total, TotalWrapper, CinemaInfo,
+} from './Prices.styled';
 
 const Prices: React.FunctionComponent<{}> = () => {
   const [{ prices }] = useAppContext();
